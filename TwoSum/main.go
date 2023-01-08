@@ -8,6 +8,7 @@ func main() {
 	}
 	target := 9
 	fmt.Println(twoSum(nums, target)) // (2,6) => 1 + 8 = 9
+	fmt.Println(twoSumHashMap(nums, target)) // (2,6) => 1 + 8 = 9
 }
 
 func twoSum(nums []int, target int) []int {
@@ -50,4 +51,31 @@ func twoSum(nums []int, target int) []int {
 	// Return the indices of the 
 	// elements that add up to the target
 	return []int{i, j}
+}
+
+func twoSumHashMap(nums []int, target int) []int {
+	// Create a map to store the indices of the array elements
+	indices := make(map[int]int)
+
+	// Iterate over the array elements
+	for i, num := range nums {
+		// Calculate the complement of the current element
+		complement := target - num
+
+		// Check if the complement exists in the map
+		j, ok := indices[complement]
+		if ok {
+			// Return the indices of the 
+			// current element and the complement
+			return []int{i, j}
+		}
+
+		// Store the index of the 
+		// current element in the map
+		indices[num] = i
+	}
+
+	// Return an empty slice if no pair 
+	// of elements adds up to the target
+	return []int{}
 }
