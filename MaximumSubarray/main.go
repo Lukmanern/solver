@@ -17,16 +17,22 @@ func main() {
 }
 
 func maxSubArray(nums []int) int {
+    	// initialize the maximum and current sum 
+	// to be the first element of the array
 	maxSum := nums[0]
 	currentSum := nums[0]
 	for i := 1; i < len(nums); i++ {
+		// find the maximum of current element and 
+		// current sum + current element
 		currentSum = findMax(nums[i], currentSum+nums[i])
+		// find the maximum of current sum and max sum
 		maxSum = findMax(maxSum, currentSum)
 	}
 	return maxSum
 }
 
 func findMax(a, b int) int {
+    	// returns the maximum of two numbers
 	if a > b {
 		return a
 	}
