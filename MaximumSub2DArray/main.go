@@ -15,18 +15,33 @@ func main() {
 }
 
 func maxSub2DArray(arr [][]int) (int, int) {
+	// Initialize maxSum and maxIndex to keep track of 
+	// the maximum sum and its corresponding index.
 	maxSum := 0
 	maxIndex := 0
+
+	// Iterate through each element in the 
+	// arr, which is a slice of integers.
 	for i, row := range arr {
+		// Initialize rowSum to keep track 
+		// of the sum of elements in the current row.
 		rowSum := 0
+
+		// Iterate through each element in the 
+		// current row and add it to rowSum.
 		for _, value := range row {
 			rowSum += value
 		}
+
+		// If it is greater, 
+		// update maxSum and maxIndex.
 		if rowSum > maxSum {
 			maxSum = rowSum
 			maxIndex = i
 		}
 	}
 
+	// return the maxIndex and maxSum
 	return maxIndex, maxSum
 }
+
