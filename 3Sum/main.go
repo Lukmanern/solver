@@ -35,13 +35,18 @@ func threeSum(nums []int) [][]int {
 				// decrement the right pointer
 				r--
 			} else {
+				// If the sum is equal to 0, append 
+				// the triplet to the result
 				res = append(res, []int{nums[i], nums[l], nums[r]})
+				// Skip any duplicate elements on the left
 				for l < r && nums[l] == nums[l+1] {
 					l++
 				}
+				// Skip any duplicate elements on the right
 				for l < r && nums[r] == nums[r-1] {
 					r--
 				}
+				// Move both pointers to the next element
 				l++
 				r--
 			}
