@@ -6,7 +6,26 @@ import (
 )
 
 func main() {
-	fmt.Println(findNthDigit(1000)) // expect 3
+	// Test Case 1
+	n := 3
+	fmt.Println("Test case 1:")
+	fmt.Printf("n = %d\n", n)
+	fmt.Printf("Output: %d\n", findNthDigit(n))
+	fmt.Println("Expected Output : 3")
+
+	// Test Case 2
+	n = 11
+	fmt.Println("Test case 2:")
+	fmt.Printf("n = %d\n", n)
+	fmt.Printf("Output: %d\n", findNthDigit(n))
+	fmt.Println("Expected Output : 0")
+	
+	// Test Case 3
+	n = 10000
+	fmt.Println("Test case 3:")
+	fmt.Printf("n = %d\n", n)
+	fmt.Printf("Output: %d\n", findNthDigit(n))
+	fmt.Println("Expected Output : 7")
 }
 
 func findNthDigit(n int) int {
