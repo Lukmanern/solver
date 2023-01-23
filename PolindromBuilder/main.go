@@ -21,5 +21,5 @@ func createPalindrome(n int) string {
 }
 
 func main() {
-	fmt.Println(createPalindrome(50)) // Output: "123454321"
+	fmt.Println(createPalindrome(5)) // Output: "123454321"
 }
