@@ -8,8 +8,10 @@ func main() {
 	fmt.Println(result)
 }
 
-// runningSum is a function that takes in a slice of integers
-// and returns a new slice with the running sum of the original slice.
+// runningSum is a function that 
+// takes in a slice of integers
+// and returns a new slice with 
+// the running sum of the original slice.
 func runningSum(nums []int) []int {
 	// Iterate through the 
 	// input slice starting at index 1

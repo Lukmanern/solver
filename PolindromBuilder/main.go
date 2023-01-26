@@ -6,13 +6,16 @@ import (
 )
 
 func createPalindrome(n int) string {
-	// Create an empty string for the palindrome
+	// Create an empty string 
+	// for the palindrome
 	p := ""
-	// Append the numbers from 1 to n to the palindrome string
+	// Append the numbers from 1 
+	// to n to the palindrome string
 	for i := 1; i <= n; i++ {
 		p += strconv.Itoa(i)
 	}
-	// Append the numbers from n-1 down to 1 to the palindrome string
+	// Append the numbers from n-1 
+	// down to 1 to the palindrome string
 	for i := n - 1; i > 0; i-- {
 		p += strconv.Itoa(i)
 	}

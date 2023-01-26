@@ -33,7 +33,8 @@ func reverseInteger(x int) int {
 	}
 
 	// Remove trailing 0s from x
-	// For example, if x = 200, it will become 2
+	// For example, if x = 200, 
+	// it will become 2
 	for true {
 		if x%100 == 0 {
 			x /= 100
