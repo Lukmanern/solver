@@ -22,7 +22,8 @@ func wordsCounter(s string) int {
 	// Iterate over the characters in the string.
 	for _, c := range s {
 		if c != ' ' {
-			// If we are not currently in a word
+			// If we are not 
+			// currently in a word
 			if !inWord {
 				// Increment the word count and 
 				// set the inWord flag to true.

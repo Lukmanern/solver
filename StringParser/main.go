@@ -15,10 +15,12 @@ func main() {
 }
 
 func parseString(str string) map[string]string {
-	// Initialize an empty map to store the key-value pairs.
+	// Initialize an empty map to 
+	// store the key-value pairs.
 	result := make(map[string]string)
 
-	// Split the input string on the comma character to 
+	// Split the input string on 
+	// the comma character to 
 	// get a slice of key-value pairs.
 	pairs := strings.Split(str, ",")
 	

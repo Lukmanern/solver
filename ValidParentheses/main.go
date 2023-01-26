@@ -43,7 +43,8 @@ func isValid(s string) bool {
 		s = strings.Replace(s, "{}", "", -1)
 	}
 	
-	// if the string is empty, all brackets have been closed
+	// if the string is empty, 
+	// all brackets have been closed
 	// return true, else return false
 	return s == ""
 }
