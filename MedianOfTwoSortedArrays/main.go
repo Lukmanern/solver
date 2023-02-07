@@ -13,8 +13,9 @@ func main() {
 	fmt.Println(findMedianSortedArrays(dataset[0], dataset[1]))
 }
 
-// findMedianSortedArrays is a function that takes in two sorted slices of integers
-// and returns the median value of the merged slice
+// findMedianSortedArrays is a function that takes 
+// in two sorted slices of integers and 
+// returns the median value of the merged slice
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	// merge the two slices
 	var merged []int = append(nums1, nums2...)

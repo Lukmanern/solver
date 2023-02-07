@@ -17,8 +17,9 @@ func main() {
 }
 
 func maxSubArray(nums []int) int {
-    	// initialize the maximum and current sum 
-	// to be the first element of the array
+    	// initialize the maximum and 
+	// current sum to be the first 
+	// element of the array
 	maxSum := nums[0]
 	currentSum := nums[0]
 	for i := 1; i < len(nums); i++ {

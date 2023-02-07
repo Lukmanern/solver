@@ -15,8 +15,9 @@ func main() {
 }
 
 func maxSub2DArray(arr [][]int) (int, int) {
-	// Initialize maxSum and maxIndex to keep track of 
-	// the maximum sum and its corresponding index.
+	// Initialize maxSum and maxIndex 
+	// to keep track of the maximum 
+	// sum and its corresponding index.
 	maxSum := 0
 	maxIndex := 0
 
