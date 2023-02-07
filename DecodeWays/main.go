@@ -45,8 +45,10 @@ func numDecodings(s string) int {
 			dp[i] += dp[i-2]
 		}
 	}
-    	// return the last element of the dp array which is 
-	// the number of ways to decode the entire string
+    	// return the last element of 
+	// the dp array which is 
+	// the number of ways 
+	// to decode the entire string
 	return dp[n]
 }
 

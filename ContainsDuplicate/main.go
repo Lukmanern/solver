@@ -17,7 +17,8 @@ func main() {
 	}
 }
 
-// check if the given slice contains any duplicates
+// check if the given slice
+// contains any duplicates
 func containsDuplicate(arr []int) bool {
 	// i, j means index, v means value
 	for i, v1 := range arr {
