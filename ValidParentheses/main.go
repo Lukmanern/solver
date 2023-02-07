@@ -7,7 +7,8 @@ import (
 
 // https://leetcode.com/problems/valid-parentheses/
 func main(){
-	// dataSet is a slice of strings that contains test cases
+	// dataSet is a slice of strings 
+	// that contains test cases
 	dataSet := []string{
 		"[]{()[][]}", // true
 		"[]{()[(][]}", // false
@@ -16,7 +17,8 @@ func main(){
 		"[]{()[{][]}", // false
 	}
 
-	// range over the dataSet and pass each test case to isValid
+	// range over the dataSet and 
+	// pass each test case to isValid
 	// print the result of isValid for each test case
 	for _, v := range dataSet {
 		fmt.Println(isValid(v))
