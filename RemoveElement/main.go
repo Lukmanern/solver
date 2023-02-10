@@ -30,11 +30,21 @@ func main() {
 }
 
 func removeElement(nums []int, val int) int {
+	// 'c' represents the current 
+	// index in the input slice
 	c := 0
 
+	// iterate over the input slice
 	for _, num := range nums {
+		// if the current number 
+		// is not equal to the 
+		// value to be removed
 		if num != val {
+			// replace the number at the 
+			// current index with the 
+			// current number
 			nums[c] = num
+			// increment the current index
 			c++
 		}
 	}
