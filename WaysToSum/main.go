@@ -16,19 +16,33 @@ func main() {
 }
 
 // my version
+// wayToSum computes the number of ways 
+// to represent N as the sum of positive 
+// integers less than or equal to K.
 func wayToSum(N int, K int) int {
+	// If N is zero (or neg return 0), there is one way 
+	// to represent it as the sum of positive 
+	// integers less than or equal to K
 	if N == 0 {
 		return 1
 	}
 	if N < 0 {
 		return 0
 	}
+	// Count the number of ways to represent N 
+	// as the sum of positive integers less than 
+	// or equal to K by iterating over all possible 
+	// values of the next integer to add to the sum.
 	count := 0
 	for i := 1; i <= K; i++ {
 		count += wayToSum(N-i, i)
 	}
+	// Return the total number of ways 
+	// to represent N as the sum of positive 
+	// integers less than or equal to K.
 	return count
 }
+
 
 // geeksforgeeks version
 // see https://www.geeksforgeeks.org/ways-to-sum-to-n-using-natural-numbers-up-to-k-with-repetitions-allowed/
