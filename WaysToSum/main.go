@@ -23,6 +23,7 @@ func wayToSum(N int, K int) int {
 	// If N is zero (or neg return 0), there is one way 
 	// to represent it as the sum of positive 
 	// integers less than or equal to K
+	// i.e., by not choosing any positive integers.
 	if N == 0 {
 		return 1
 	}
