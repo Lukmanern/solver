@@ -17,22 +17,22 @@ func main() {
 }
 
 func findDuplicate(nums []int) int {
-    	// Create a map to store the occurrences 
+	// Create a map to store the occurrences
 	// of each element in the array
 	hashMap := make(map[int]int, 0)
-    	// Initialize a variable to 
+	// Initialize a variable to
 	// store the duplicate value
 	n := 0
-    	// Iterate through the 
+	// Iterate through the
 	// array of integers
 	for _, n = range nums {
-        	// Increment the occurrence 
+		// Increment the occurrence
 		// count for the current element
 		hashMap[n] += 1
-        	// Check if the current element 
+		// Check if the current element
 		// has occurred more than once
 		if hashMap[n] >= 2 {
-            	// If so, break out of the loop 
+			// If so, break out of the loop
 			// and return the current element
 			break
 		}

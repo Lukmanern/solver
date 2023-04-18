@@ -19,34 +19,34 @@ func findMissingNumber(arr []int) int {
 		sum += value
 	}
 
-	// Calculate the sum of all the numbers 
-	// from 1 to the length of the array + 1. 
-	// This is the expected sum if there 
+	// Calculate the sum of all the numbers
+	// from 1 to the length of the array + 1.
+	// This is the expected sum if there
 	// are no missing numbers
 	expectedSum := (len(arr) + 1) * (len(arr) + 2) / 2
-	
-	// Return the difference between 
+
+	// Return the difference between
 	// the expected sum and the actual
 	// sum as the missing number
 	return expectedSum - sum
 }
 
 func findMissingNumbers(arr []int) []int {
-	// Create a map to store 
-	// the counts of each 
+	// Create a map to store
+	// the counts of each
 	// number in the array
 	counts := make(map[int]int)
 	for _, value := range arr {
 		counts[value]++
 	}
 
-	// Create a slice to store 
+	// Create a slice to store
 	// the missing numbers
 	var missingNumbers []int
 
-	// Find the missing numbers by iterating 
-	// through all the numbers from 1 to the 
-	// length of the array + 1 and checking 
+	// Find the missing numbers by iterating
+	// through all the numbers from 1 to the
+	// length of the array + 1 and checking
 	// if they are in the counts map
 	for i := 1; i <= len(arr)+1; i++ {
 		if _, ok := counts[i]; !ok {

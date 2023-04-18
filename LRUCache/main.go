@@ -10,25 +10,30 @@ func main() {
 
 	cache.Put(1, 1)
 	cache.Put(2, 2)
-	fmt.Println(cache.Get(1)) // should return 1
+	fmt.Println(cache.Get(1)) // return 1
 
 	cache.Put(3, 3)
-	fmt.Println(cache.Get(2)) // should return -1
+	fmt.Println(cache.Get(2)) // return -1
 
 	cache.Put(4, 4)
-	fmt.Println(cache.Get(1)) // should return -1
-	fmt.Println(cache.Get(3)) // should return 3
-	fmt.Println(cache.Get(4)) // should return 4
+	fmt.Println(cache.Get(1)) // return -1
+	fmt.Println(cache.Get(3)) // return 3
+	fmt.Println(cache.Get(4)) // return 4
 }
 
-// LRUCache is a struct that represents a LRU cache.
+// LRUCache is a struct that 
+// represents a LRU cache.
 type LRUCache struct {
 	cache    map[int]*list.Element
 	linkList *list.List
 	capacity int
-	// cache 	 : a map to store the cache values and their corresponding list element
-	// linkList  : a doubly linked list to store the order of access for cache values
-	// capacity  : the maximum capacity of the cache
+	/*
+	cache 	: a map to store the cache values 
+		  	and their corresponding list element
+	linkList 	: a doubly linked list to store 
+			the order of access for cache values
+	capacity 	: the maximum capacity of the cache
+	*/
 }
 
 // Constructor is a function that creates 
