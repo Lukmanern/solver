@@ -19,7 +19,7 @@ func main() {
 	fmt.Printf("n = %d\n", n)
 	fmt.Printf("Output: %d\n", findNthDigit(n))
 	fmt.Println("Expected Output : 0")
-	
+
 	// Test Case 3
 	n = 10000
 	fmt.Println("Test case 3:")

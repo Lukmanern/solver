@@ -8,15 +8,15 @@ func main() {
 }
 
 func reverseString(s string) string {
-	// If the length of the string is 0, 
+	// If the length of the string is 0,
 	// return the string as is.
 	if len(s) == 0 {
 		return s
 	}
-	
-	// Add the first character of s 
+
+	// Add the first character of s
 	// to the end of the reversed substring.
-	// This process continues until 
+	// This process continues until
 	// the entire string has been reversed.
 	return reverseString(s[1:]) + s[0:1]
 }

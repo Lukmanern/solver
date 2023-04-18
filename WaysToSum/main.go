@@ -16,12 +16,12 @@ func main() {
 }
 
 // my version
-// wayToSum computes the number of ways 
-// to represent N as the sum of positive 
+// wayToSum computes the number of ways
+// to represent N as the sum of positive
 // integers less than or equal to K.
 func wayToSum(N int, K int) int {
-	// If N is zero (or neg return 0), there is one way 
-	// to represent it as the sum of positive 
+	// If N is zero (or neg return 0), there is one way
+	// to represent it as the sum of positive
 	// integers less than or equal to K
 	// i.e., by not choosing any positive integers.
 	if N == 0 {
@@ -30,46 +30,45 @@ func wayToSum(N int, K int) int {
 	if N < 0 {
 		return 0
 	}
-	// Count the number of ways to represent N 
-	// as the sum of positive integers less than 
-	// or equal to K by iterating over all possible 
+	// Count the number of ways to represent N
+	// as the sum of positive integers less than
+	// or equal to K by iterating over all possible
 	// values of the next integer to add to the sum.
 	count := 0
 	for i := 1; i <= K; i++ {
 		count += wayToSum(N-i, i)
 	}
-	// Return the total number of ways 
-	// to represent N as the sum of positive 
+	// Return the total number of ways
+	// to represent N as the sum of positive
 	// integers less than or equal to K.
 	return count
 }
-
 
 // geeksforgeeks version
 // see https://www.geeksforgeeks.org/ways-to-sum-to-n-using-natural-numbers-up-to-k-with-repetitions-allowed/
 func NumberOfways(N, K int) int {
 
-    // Initialize a slice
-    dp := make([]int, N+1)
-    
-    // Update dp[0] to 1
-    dp[0] = 1
-    
-    // Iterate over the range [1, K+1]
-    for row := 1; row < K+1; row++ {
-    
-        // Iterate over the range [1, N+1]
-        for col := 1; col < N+1; col++ {
-        
-            // If col is greater than or equal to row
-            if col >= row {
-            
-                // Update current dp[col] state
-                dp[col] = dp[col] + dp[col-row]
-            }
-        }
-    }
-    
-    // Return the total number of ways
-    return dp[N]
+	// Initialize a slice
+	dp := make([]int, N+1)
+
+	// Update dp[0] to 1
+	dp[0] = 1
+
+	// Iterate over the range [1, K+1]
+	for row := 1; row < K+1; row++ {
+
+		// Iterate over the range [1, N+1]
+		for col := 1; col < N+1; col++ {
+
+			// If col is greater than or equal to row
+			if col >= row {
+
+				// Update current dp[col] state
+				dp[col] = dp[col] + dp[col-row]
+			}
+		}
+	}
+
+	// Return the total number of ways
+	return dp[N]
 }
